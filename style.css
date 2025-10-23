@@ -1,0 +1,268 @@
+/* ===== SCP: Code Black Wikipedia Styles ===== */
+
+/* Colors & Fonts */
+:root {
+  --background: #0e0e0e;
+  --surface: #1a1a1a;
+  --accent: #d32f2f;
+  --text-primary: #ffffff;
+  --text-secondary: #bdbdbd;
+  --font-main: "Verdana", "Arial", sans-serif;
+  --font-header: "Agency FB", "Arial Black", sans-serif;
+}
+
+/* General */
+body {
+  background-color: var(--background);
+  color: var(--text-primary);
+  font-family: var(--font-main);
+  margin: 0;
+  padding: 0;
+}
+
+/* Header */
+header {
+  background-color: var(--surface);
+  text-align: center;
+  padding: 30px 10px;
+  border-bottom: 3px solid var(--accent);
+}
+
+header h1 {
+  font-family: var(--font-header);
+  font-size: 2.5em;
+  color: var(--accent);
+  margin: 0;
+}
+
+header .subtitle {
+  color: var(--text-secondary);
+  font-size: 1.1em;
+}
+
+/* Navigation */
+nav {
+  background-color: var(--accent);
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 10px;
+}
+
+nav a {
+  color: var(--text-primary);
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+  transition: opacity 0.2s;
+}
+
+nav a:hover {
+  opacity: 0.8;
+}
+
+/* Main Content */
+main {
+  padding: 40px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.intro h2, .featured h2 {
+  border-left: 5px solid var(--accent);
+  padding-left: 10px;
+  color: var(--accent);
+  font-family: var(--font-header);
+}
+
+.featured article {
+  background-color: var(--surface);
+  padding: 20px;
+  margin-top: 15px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(211, 47, 47, 0.3);
+}
+
+.featured h3 {
+  margin-top: 0;
+  color: var(--text-primary);
+}
+
+.read-more {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.read-more:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+footer {
+  background-color: var(--surface);
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9em;
+  color: var(--text-secondary);
+  border-top: 3px solid var(--accent);
+}
+
+/* ===== LCZ Item Lists ===== */
+
+.item-list {
+  background-color: #111;
+  border-left: 4px solid var(--accent);
+  border-radius: 8px;
+  padding: 15px 25px;
+  list-style: none;
+  margin: 15px 0 25px 0;
+  box-shadow: 0 0 10px rgba(211, 47, 47, 0.3);
+}
+
+.item-list li {
+  position: relative;
+  margin: 10px 0;
+  color: var(--text-secondary);
+  padding-left: 25px;
+  line-height: 1.6;
+}
+
+.item-list a {
+  color: var(--text-primary);
+  text-decoration: none;
+  margin: 0 5px;
+  font-weight: bold;
+  transition: opacity 0.2s;
+}
+
+.item-list a:hover {
+  opacity: 0.8;
+}
+
+/* Custom red bullet */
+.item-list li::before {
+  content: "▸";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--accent);
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+/* Highlight item titles */
+.item-list li strong {
+  color: var(--text-primary);
+  font-family: var(--font-header);
+}
+
+/* ===== Room Images ===== */
+
+.room-image {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 8px;
+  display: block;
+  margin: 15px auto;
+  border: 2px solid var(--accent);
+  box-shadow: 0 0 15px rgba(211, 47, 47, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.room-image:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 25px rgba(211, 47, 47, 0.6);
+}
+
+/* ===== Rooms Page Styles ===== */
+
+.rooms-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.room-card {
+  background-color: var(--surface);
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(211, 47, 47, 0.3);
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.room-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(211, 47, 47, 0.6);
+}
+
+.room-card h3 {
+  color: var(--accent);
+  font-family: var(--font-header);
+}
+
+.room-card p {
+  color: var(--text-secondary);
+  margin: 10px 0 20px;
+}
+
+nav a.active {
+  text-decoration: underline;
+  opacity: 1;
+}
+
+/* ===== LCZ Structured Sections ===== */
+
+.zone-section {
+  background-color: var(--surface);
+  padding: 25px;
+  margin-top: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(211, 47, 47, 0.3);
+}
+
+.zone-section h2 {
+  color: var(--accent);
+  font-family: var(--font-header);
+  margin-top: 0;
+}
+
+.subsection {
+  background-color: #111;
+  border-left: 4px solid var(--accent);
+  margin-top: 15px;
+  padding: 15px 20px;
+  border-radius: 6px;
+}
+
+.subsection h3 {
+  color: var(--text-primary);
+  font-family: var(--font-header);
+}
+
+.subsection p {
+  color: var(--text-secondary);
+  margin-top: 5px;
+}
+
+.warning {
+  border-left: 5px solid var(--accent);
+  background-color: #1a1a1a;
+  color: var(--text-primary);
+  font-weight: bold;
+  padding: 25px;
+  border-radius: 8px;
+  margin-top: 40px;
+}
+
+.warning h2 {
+  color: var(--accent);
+  font-family: var(--font-header);
+}
+
