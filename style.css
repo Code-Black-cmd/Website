@@ -266,3 +266,46 @@ nav a.active {
   font-family: var(--font-header);
 }
 
+/* ===== Item Image Icon Style (only for Items Page) ===== */
+
+.items-page .subsection {
+  position: relative;
+  background-color: #111;
+  border-left: 4px solid var(--accent);
+  padding: 20px 120px 20px 20px; /* right padding to protect from image */
+  margin: 15px 0;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.items-page .subsection h3 {
+  margin-top: 0;
+  color: var(--accent);
+}
+
+
+.items-page .subsection li {
+  margin-bottom: 6px;
+}
+
+/* Icon styling */
+.items-page .subsection .room-image {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  border-radius: 8px;
+  background-color: #222;
+  padding: 5px;
+  box-shadow: 0 0 8px rgba(211, 47, 47, 0.3);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  z-index: 1;
+}
+
+.items-page .subsection .room-image:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 12px rgba(211, 47, 47, 0.6);
+}
+
